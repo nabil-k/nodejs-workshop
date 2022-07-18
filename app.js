@@ -10,16 +10,16 @@ app.use(bodyParser.json())
 // Root endpoints
 app.get('/', (req, res) => {
   res.send('Hello World!').status(200);
-})
+});
 
 app.post('/', (req, res) => {
   res.send('Got a POST request');
   console.log(req.body);
-})
+});
 
 // User endpoints
 app.use('/user', users);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
-})
+});
